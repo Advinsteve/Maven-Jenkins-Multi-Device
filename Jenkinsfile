@@ -18,7 +18,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo ${PATH}' 
+                sh 'echo that path variable :  ${PATH}' 
             }
         }
         stage('Test') {
