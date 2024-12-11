@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    
+
     environment {
         MAVEN_HOME = "/usr/share/maven" 
         PATH = "$PATH:$MAVEN_HOME/bin"
@@ -14,7 +14,7 @@ pipeline {
         IOS_BUNDLEID = "${IOS_BUNDLEID}"
         CLOUD = "${CLOUD}"
     }
-    
+
     stages {
         stage('Build') {
             steps {
