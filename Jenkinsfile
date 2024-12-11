@@ -16,6 +16,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+
+                sh 'export PATH=/var/jenkins_home/abhinav/apache-maven-3.9.5/bin:$PATH'
+                sh 'mvn -version'
                 sh 'mvn clean'
             }
         }
