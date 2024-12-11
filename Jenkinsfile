@@ -18,7 +18,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn clean' 
+                sh 'whereis mvn' 
             }
         }
         stage('Test') {
