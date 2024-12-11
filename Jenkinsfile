@@ -18,6 +18,8 @@ pipeline {
             steps {
 
                 sh 'export PATH=/var/jenkins_home/abhinav/apache-maven-3.9.5/bin:$PATH'
+                sh 'java --version'
+                sh 'echo $JAVE_HOME' 
                 sh 'mvn -version'
                 sh 'mvn clean'
             }
