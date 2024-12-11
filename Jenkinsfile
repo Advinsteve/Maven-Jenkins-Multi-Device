@@ -21,6 +21,7 @@ pipeline {
             steps {
                 sh 'mvn -version'
                 sh 'mvn clean'
+                sh 'pwd'
             }
         }
         stage('Test') {
