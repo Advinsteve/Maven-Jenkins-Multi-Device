@@ -3,7 +3,6 @@ pipeline {
     
     environment {
         MAVEN_HOME = "/usr/share/maven" 
-        PATH = "$PATH:$MAVEN_HOME/bin"
         USERNAME = "${USERNAME}"  
         APIKEY = "${APIKEY}"      
         APPIUM_VERSION = "${APPIUM_VERSION}" 
@@ -12,23 +11,19 @@ pipeline {
         ANDROID_APPPACKAGE = "${ANDROID_APPPACKAGE}"
         ANDROID_APPACTIVITY = "${ANDROID_APPACTIVITY}"
         IOS_BUNDLEID = "${IOS_BUNDLEID}"
-        CLOUD="${CLOUD}"
+        CLOUD = "${CLOUD}"
     }
     
     stages {
         stage('Build') {
             steps {
-                // keepEnv(['foo', 'WORKSPACE']) 
-                // withEnv(["PATH=$PATH:$MAVEN_HOME/bin"]) 
-                sh 'mvn clean'
+                sh '${MAVEN_HOME}/bin/mvn clean' 
             }
         }
         stage('Test') {
             steps {
-                //  withEnv(["PATH=$PATH:$MAVEN_HOME/bin"]) 
-                // withEnv(["PATH=$PATH:$MAVEN_HOME/bin"]) 
                 sh """
-                    mvn test \
+                    ${MAVEN_HOME}/bin/mvn test \
                     -Dusername=${USERNAME} \
                     -DapiKey=${APIKEY} \
                     -DappiumVersion=${APPIUM_VERSION} \
@@ -43,4 +38,3 @@ pipeline {
         }
     }
 }
-
