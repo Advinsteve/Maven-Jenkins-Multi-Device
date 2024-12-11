@@ -20,12 +20,13 @@ pipeline {
             steps {
                 sh 'whereis mvn' 
                 sh 'echo ${PATH}'
+                sh '/home/dell/.nvm/versions/node/v14.21.3/bin/npm --version'
             }
         }
         stage('Test') {
             steps {
                 sh """
-                    "/usr/share/maven/bin/mvn" test \
+                    /usr/bin/mvn test \
                     -Dusername=${USERNAME} \
                     -DapiKey=${APIKEY} \
                     -DappiumVersion=${APPIUM_VERSION} \
