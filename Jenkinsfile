@@ -3,6 +3,7 @@ pipeline {
     
     environment {
         MAVEN_HOME = "/usr/share/maven" 
+        PATH = "$PATH:$MAVEN_HOME/bin"
         USERNAME = "${USERNAME}"  
         APIKEY = "${APIKEY}"      
         APPIUM_VERSION = "${APPIUM_VERSION}" 
@@ -17,7 +18,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh '${MAVEN_HOME}/bin/mvn clean' 
+                sh 'echo ${PATH}' 
             }
         }
         stage('Test') {
