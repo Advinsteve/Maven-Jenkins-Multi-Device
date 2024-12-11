@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" configfailurepolicy="continue" name="pCloudy Suite" parallel="tests">
+
+     <listeners>
+        <listener class-name="com.pCloudy.TestNG.TestNGConfig"/>
+    </listeners>
+
+    <parameter name="allure.results.directory" value="custom-allure-results" />
+    
+
+	<test name="Android-Samsung-1"> <parameter name="deviceManufaturer" value="Samsung" 
+		/> <classes> <class name="com.pCloudy.testNG.Runner" /> </classes> </test>
+
+	<test name="Android-Google-2"> <parameter name="deviceManufaturer" value="Google" 
+		/> <classes> <class name="com.pCloudy.testNG.Runner" /> </classes> </test>
+		
+	<test name="Android-Motorola-3"> <parameter name="deviceManufaturer" value="Motorola" 
+		/> <classes> <class name="com.pCloudy.testNG.Runner" /> </classes> </test>
+		
+	<test name="Android-oneplus-4"> <parameter name="deviceManufaturer" value="oneplus" 
+		/> <classes> <class name="com.pCloudy.testNG.Runner" /> </classes> </test>
+		
+	<test name="Android-xiaomi-5"> <parameter name="deviceManufaturer" value="xiaomi" 
+		/> <classes> <class name="com.pCloudy.testNG.Runner" /> </classes> </test>
+		
+	<test name="Android-Samsung-7"> <parameter name="deviceManufaturer" value="Samsung" 
+		/> <classes> <class name="com.pCloudy.testNG.Runner" /> </classes> </test>
+		
+	<test name="Android-xiaomi-6"> <parameter name="deviceManufaturer" value="xiaomi" 
+		/> <classes> <class name="com.pCloudy.testNG.Runner" /> </classes> </test>
+
+	<test name="Android-Google-8"> <parameter name="deviceManufaturer" value="Google" 
+		/> <classes> <class name="com.pCloudy.testNG.Runner" /> </classes> </test>
+		
+	<test name="Android-Motorola-9"> <parameter name="deviceManufaturer" value="Motorola" 
+		/> <classes> <class name="com.pCloudy.testNG.Runner" /> </classes> </test>
+		
+	<test name="Android-oneplus-11"> <parameter name="deviceManufaturer" value="oneplus" 
+		/> <classes> <class name="com.pCloudy.testNG.Runner" /> </classes> </test>
+		
+	<test name="Android-Motorola-10"> <parameter name="deviceManufaturer" value="Motorola" 
+		/> <classes> <class name="com.pCloudy.testNG.Runner" /> </classes> </test>
+	
+	<test name="Android-Samsung-12"> <parameter name="deviceManufaturer" value="Samsung" 
+		/> <classes> <class name="com.pCloudy.testNG.Runner" /> </classes> </test>
+
+	<test name="Android-Google-13"> <parameter name="deviceManufaturer" value="Google" 
+		/> <classes> <class name="com.pCloudy.testNG.Runner" /> </classes> </test>
+		
+	<test name="Android-oppo-14"> <parameter name="deviceManufaturer" value="oppo" 
+		/> <classes> <class name="com.pCloudy.testNG.Runner" /> </classes> </test>
+		
+	<test name="Android-vivo-15"> <parameter name="deviceManufaturer" value="vivo" 
+		/> <classes> <class name="com.pCloudy.testNG.Runner" /> </classes> </test>
+</suite> <!-- Suite -->
