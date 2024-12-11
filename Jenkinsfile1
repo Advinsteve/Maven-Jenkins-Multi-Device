@@ -4,7 +4,6 @@ pipeline {
     environment {
         MAVEN_HOME = "/usr/share/maven" 
         PATH = "$PATH:$MAVEN_HOME/bin"
-        ALLURE="/usr/bin/allure"
         USERNAME = "${USERNAME}"  
         APIKEY = "${APIKEY}"      
         APPIUM_VERSION = "${APPIUM_VERSION}" 
@@ -37,27 +36,6 @@ pipeline {
                     -DiosBundleId=${IOS_BUNDLEID} \
                     -Dcloud=${CLOUD}
                 """
-            }
-        }
-    }
-
-    post {
-        always {
-            script {
-                def allureResultsDir = "${env.WORKSPACE}/allure-results"
-                if (fileExists(allureResultsDir)) {
-                    echo "Directory 'allure-results' found. Deleting it before generating the report."
-                    sh "rm -rf ${allureResultsDir}"
-                } else {
-                    echo "Directory 'allure-results' not found. Proceeding to generate the report."
-                }
-            }
-            stage('Report') {
-                steps {
-                    sh 'echo "Generating reports..."'
-                    sh '${ALLURE} --version'
-                    sh '${ALLURE} serve'
-                }
             }
         }
     }
