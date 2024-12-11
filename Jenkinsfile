@@ -25,7 +25,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh """
-                    ${PATH}/mvn test \
+                    /usr/share/maven/bin/mvn test \
                     -Dusername=${USERNAME} \
                     -DapiKey=${APIKEY} \
                     -DappiumVersion=${APPIUM_VERSION} \
