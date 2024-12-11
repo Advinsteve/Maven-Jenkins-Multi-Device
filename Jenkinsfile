@@ -4,7 +4,7 @@ pipeline {
     environment {
         MAVEN_HOME = "/usr/share/maven" 
         PATH = "$PATH:$MAVEN_HOME/bin"
-        ALLURE="/usr/bin/allure"
+        ALLURE = "/usr/bin/allure"
         USERNAME = "${USERNAME}"  
         APIKEY = "${APIKEY}"      
         APPIUM_VERSION = "${APPIUM_VERSION}" 
@@ -52,13 +52,9 @@ pipeline {
                     echo "Directory 'allure-results' not found. Proceeding to generate the report."
                 }
             }
-            stage('Report') {
-                steps {
-                    sh 'echo "Generating reports..."'
-                    sh '${ALLURE} --version'
-                    sh '${ALLURE} serve'
-                }
-            }
+            sh 'echo "Generating reports..."'
+            sh '${ALLURE} --version'
+            sh '${ALLURE} serve'
         }
     }
 }
