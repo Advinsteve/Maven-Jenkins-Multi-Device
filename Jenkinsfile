@@ -18,16 +18,16 @@ pipeline {
 
     stages {
         stage('Build') {
-            script {
-                def allureResultsDir = "${env.WORKSPACE}/allure-results"
-                if (fileExists(allureResultsDir)) {
-                    echo "Directory 'allure-results' found. Deleting it before generating the report."
-                    sh "rm -rf ${allureResultsDir}"
-                } else {
-                    echo "Directory 'allure-results' not found. Proceeding to generate the report."
-                }
-            }
             steps {
+                script {
+                    def allureResultsDir = "${env.WORKSPACE}/allure-results"
+                    if (fileExists(allureResultsDir)) {
+                        echo "Directory 'allure-results' found. Deleting it before generating the report."
+                        sh "rm -rf ${allureResultsDir}"
+                    } else {
+                        echo "Directory 'allure-results' not found. Proceeding to generate the report."
+                    }
+                }
                 sh 'mvn -version'
                 sh 'mvn clean'
                 sh 'pwd'
@@ -55,8 +55,6 @@ pipeline {
         always {
             sh 'echo "Generating reports..."'
             sh '${ALLURE} --version'
-            sh '${ALLURE} serve'
-            sh 'pwd'
             sh '''
                 ${ALLURE} serve & 
                 echo $! > allure-server.pid
