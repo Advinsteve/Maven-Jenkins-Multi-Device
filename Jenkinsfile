@@ -20,6 +20,7 @@ pipeline {
             steps {
                 sh 'whereis mvn' 
                 sh 'echo ${PATH}'
+                sh '/usr/bin/mvn --version'
                 sh '/home/dell/.nvm/versions/node/v14.21.3/bin/npm --version'
             }
         }
