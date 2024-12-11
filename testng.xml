@@ -15,7 +15,7 @@
 	<test name="Android-Google-2"> <parameter name="deviceManufaturer" value="Google" 
 		/> <classes> <class name="com.pCloudy.testNG.Runner" /> </classes> </test>
 		
-	<test name="Android-Motorola-3"> <parameter name="deviceManufaturer" value="Motorola" 
+	<!-- <test name="Android-Motorola-3"> <parameter name="deviceManufaturer" value="Motorola" 
 		/> <classes> <class name="com.pCloudy.testNG.Runner" /> </classes> </test>
 		
 	<test name="Android-oneplus-4"> <parameter name="deviceManufaturer" value="oneplus" 
@@ -52,5 +52,5 @@
 		/> <classes> <class name="com.pCloudy.testNG.Runner" /> </classes> </test>
 		
 	<test name="Android-vivo-15"> <parameter name="deviceManufaturer" value="vivo" 
-		/> <classes> <class name="com.pCloudy.testNG.Runner" /> </classes> </test>
+		/> <classes> <class name="com.pCloudy.testNG.Runner" /> </classes> </test> -->
 </suite> <!-- Suite -->

@@ -46,6 +46,7 @@ pipeline {
             sh 'echo "Generating reports..."'
             sh '${ALLURE} --version'
             sh '${ALLURE} serve'
+            sh 'pwd'
             sh '''
                 ${ALLURE} serve & 
                 echo $! > allure-server.pid
