@@ -2,8 +2,6 @@ pipeline {
     agent any
     
     environment {
-        MAVEN_HOME = "/usr/share/maven" 
-        PATH = "$PATH:$MAVEN_HOME/bin"
         USERNAME = "${USERNAME}"  
         APIKEY = "${APIKEY}"      
         APPIUM_VERSION = "${APPIUM_VERSION}" 
@@ -18,17 +16,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'pwd'
-                sh 'whereis mvn' 
-                sh 'echo ${PATH}'
-                sh '/usr/bin/mvn --version'
-                sh '/home/dell/.nvm/versions/node/v14.21.3/bin/npm --version'
+                sh 'mvn clean'
             }
         }
         stage('Test') {
             steps {
                 sh """
-                    /usr/bin/mvn test \
+                    mvn test \
                     -Dusername=${USERNAME} \
                     -DapiKey=${APIKEY} \
                     -DappiumVersion=${APPIUM_VERSION} \
