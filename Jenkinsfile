@@ -43,15 +43,6 @@ pipeline {
 
     post {
         always {
-            script {
-                def allureResultsDir = "${env.WORKSPACE}/allure-results"
-                if (fileExists(allureResultsDir)) {
-                    echo "Directory 'allure-results' found. Deleting it before generating the report."
-                    sh "rm -rf ${allureResultsDir}"
-                } else {
-                    echo "Directory 'allure-results' not found. Proceeding to generate the report."
-                }
-            }
             sh 'echo "Generating reports..."'
             sh '${ALLURE} --version'
             sh '${ALLURE} serve'
