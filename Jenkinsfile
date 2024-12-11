@@ -18,13 +18,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo that path variable :  ${PATH}' 
+                sh 'mvn clean' 
             }
         }
         stage('Test') {
             steps {
                 sh """
-                    ${MAVEN_HOME}/bin/mvn test \
+                    mvn test \
                     -Dusername=${USERNAME} \
                     -DapiKey=${APIKEY} \
                     -DappiumVersion=${APPIUM_VERSION} \
