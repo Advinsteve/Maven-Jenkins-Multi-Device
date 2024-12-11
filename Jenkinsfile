@@ -19,6 +19,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'whereis mvn' 
+                sh 'echo ${PATH}'
             }
         }
         stage('Test') {
