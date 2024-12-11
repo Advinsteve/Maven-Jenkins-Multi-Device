@@ -55,10 +55,7 @@ pipeline {
         always {
             sh 'echo "Generating reports..."'
             sh '${ALLURE} --version'
-            sh '''
-                ${ALLURE} serve & 
-                echo $! > allure-server.pid
-            '''
+            sh '${ALLURE} serve'
         }
     }
 }
