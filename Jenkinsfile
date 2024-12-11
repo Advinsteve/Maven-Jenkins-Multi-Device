@@ -18,6 +18,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'pwd'
                 sh 'whereis mvn' 
                 sh 'echo ${PATH}'
                 sh '/usr/bin/mvn --version'
