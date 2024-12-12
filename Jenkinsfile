@@ -41,19 +41,19 @@ pipeline {
             steps {
                 sh """
                     mvn test \
-                    -Dusername=${USERNAME} \
-                    -DapiKey=${APIKEY} \
-                    -DappiumVersion=${APPIUM_VERSION} \
-                    -DandroidApplication=${ANDROID_APPLICATION} \
-                    -DiosApplication=${IOS_APPLICATION} \
-                    -DandroidAppPackage=${ANDROID_APPPACKAGE} \
-                    -DandroidAppActivity=${ANDROID_APPACTIVITY} \
-                    -DiosBundleId=${IOS_BUNDLEID} \
-                    -Dcloud=${CLOUD} \
-                    -DprojectName=${PROJECT_NAME} \
-                    -DbuildName=${BUILD_NAME} \
-                    -DtestName=${TEST_NAME} \
-                    -DtagName=${TAG_NAME}
+                    -Dusername="${USERNAME}" \
+                    -DapiKey="${APIKEY}" \
+                    -DappiumVersion="${APPIUM_VERSION}" \
+                    -DandroidApplication="${ANDROID_APPLICATION}" \
+                    -DiosApplication="${IOS_APPLICATION}" \
+                    -DandroidAppPackage="${ANDROID_APPPACKAGE}" \
+                    -DandroidAppActivity="${ANDROID_APPACTIVITY}" \
+                    -DiosBundleId="${IOS_BUNDLEID}" \
+                    -Dcloud="${CLOUD}" \
+                    -DprojectName="${PROJECT_NAME}" \
+                    -DbuildName="${BUILD_NAME}" \
+                    -DtestName="${TEST_NAME}" \
+                    -DtagName="${TAG_NAME}"
                 """
             }
         }
