@@ -2,13 +2,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="5" configfailurepolicy="continue" name="pCloudy Suite" parallel="tests">
 
-     <listeners>
-        <listener class-name="com.pCloudy.TestNG.TestNGConfig"/>
-    </listeners>
-
-    <parameter name="allure.results.directory" value="custom-allure-results" />
-    
-
 	<test name="Android-Samsung-1"> <parameter name="deviceManufaturer" value="Samsung" 
 		/> <classes> <class name="com.pCloudy.testNG.Runner" /> </classes> </test>
 
