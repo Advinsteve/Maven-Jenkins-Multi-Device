@@ -77,6 +77,7 @@ public class Driver {
 		capabilities.setCapability("build", EnvironmentUtility.getBuildName());
 		capabilities.setCapability("name", EnvironmentUtility.getTestName());
 		capabilities.setCapability("tag", EnvironmentUtility.getTagName());
+		System.out.println(capabilities);
 		
 	}
 
