@@ -14,12 +14,16 @@ pipeline {
         ANDROID_APPACTIVITY = "${ANDROID_APPACTIVITY}"
         IOS_BUNDLEID = "${IOS_BUNDLEID}"
         CLOUD = "${CLOUD}"
+        PROJECT_NAME="${PROJECT_NAME}"
+        BUILD_NAME="${BUILD_NAME}"
+        TEST_NAME="${TEST_NAME}"
+        TAG_NAME="${TAG_NAME}"
     }
 
     stages {
         stage('Build') {
             steps {
-                script {
+				 script {
                     def allureResultsDir = "${env.WORKSPACE}/allure-results"
                     if (fileExists(allureResultsDir)) {
                         echo "Directory 'allure-results' found. Deleting it before generating the report."
@@ -30,7 +34,6 @@ pipeline {
                 }
                 sh 'mvn -version'
                 sh 'mvn clean'
-                sh 'pwd'
             }
         }
         stage('Test') {
@@ -46,16 +49,20 @@ pipeline {
                     -DandroidAppActivity=${ANDROID_APPACTIVITY} \
                     -DiosBundleId=${IOS_BUNDLEID} \
                     -Dcloud=${CLOUD}
+                    -DprojectName= ${PROJECT_NAME}\
+                    -DbuildName=${BUILD_NAME} \
+                    -DtestName=${TEST_NAME} \
+                    -DtagName=${TAG_NAME}
                 """
             }
         }
     }
-
-    post {
+     post {
         always {
             sh 'echo "Generating reports..."'
             sh '${ALLURE} --version'
             sh '${ALLURE} serve'
         }
     }
+
 }

@@ -10,6 +10,10 @@ public class EnvironmentUtility {
 	private static String androidAppActivity;
 	private static String iosBundleId;
 	private static String cloud;
+	private static String projectName;
+	private static String buildName;
+	private static String testName;
+	private static String tagName;
 
 	public static void initializeEnv() {
 		username = System.getProperty("username", "");
@@ -21,7 +25,15 @@ public class EnvironmentUtility {
 		androidAppActivity = System.getProperty("androidAppActivity", "");
 		iosBundleId = System.getProperty("iosBundleId", "");
 		cloud = System.getProperty("cloud", "");
+		projectName = System.getProperty("projectName", "");
+		buildName = System.getProperty("buildName", "");
+		testName = System.getProperty("testName", "");
+		tagName = System.getProperty("tagName", "");
+
 	}
+
+
+
 
 	public static String getUsername() {
 		return username;
@@ -54,9 +66,25 @@ public class EnvironmentUtility {
 	public static String getIosBundleId() {
 		return iosBundleId;
 	}
-	
+
 	public static String getCloud() {
 		return cloud;
+	}
+	
+	public static String getProjectName() {
+		return projectName;
+	}
+	
+	public static String getBuildName() {
+		return buildName;
+	}
+	
+	public static String getTestName() {
+		return testName;
+	}
+	
+	public static String getTagName() {
+		return tagName;
 	}
 }
 
