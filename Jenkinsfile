@@ -2,9 +2,8 @@ pipeline {
     agent any
 
     environment {
-        MAVEN_HOME = "/usr/share/maven" 
+        MAVEN_HOME = "/usr/share/maven"  // configure according to your machine path
         PATH = "$PATH:$MAVEN_HOME/bin"
-        ALLURE = "/usr/bin/allure"
         USERNAME = "${USERNAME}"  
         APIKEY = "${APIKEY}"      
         APPIUM_VERSION = "${APPIUM_VERSION}" 
