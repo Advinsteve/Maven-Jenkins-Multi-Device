@@ -75,7 +75,7 @@ public class Runner {
 	public void endTest(ITestResult result) throws  IOException, InterruptedException {
  
 		String status = result.isSuccess() ? "pass" : "Fail";
-		System.out.println("status of the test case"+ status);
+		System.out.println("status of the test case : "+ status);
 		driver.executeScript("pCloudy_setResult", status);
  
 		driver.quit();
