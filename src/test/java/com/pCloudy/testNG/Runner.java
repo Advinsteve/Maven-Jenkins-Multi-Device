@@ -21,7 +21,6 @@ import org.testng.annotations.Test;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
-import com.pCloudy.Controller.Allurelogging;
 import com.pCloudy.Controller.Environment;
 import com.pCloudy.TestCase.*;
 import com.pCloudy.Utils.EnvironmentUtility;
@@ -65,7 +64,6 @@ public class Runner {
 			}
 			else {TestCases.androidTestDemo(driver);}
 		}catch(Exception testCaseException) {
-			Allurelogging.logFaliureScreenCapture(driver);
 			throw new Exception(testCaseException);
 		}
 	}
@@ -73,14 +71,14 @@ public class Runner {
 
 	@AfterMethod
 	public void endTest(ITestResult result) throws  IOException, InterruptedException {
- 
+
 		String status = result.isSuccess() ? "pass" : "Fail";
 		System.out.println("status of the test case : "+ status);
 		driver.executeScript("pCloudy_setResult", status);
- 
+
 		driver.quit();
- 
- 
+
+
 	}
 
 
