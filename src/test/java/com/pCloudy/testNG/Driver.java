@@ -71,7 +71,7 @@ public class Driver {
 		
 		capabilities.setCapability("pCloudy_Username", EnvironmentUtility.getUsername());
 		capabilities.setCapability("pCloudy_ApiKey", EnvironmentUtility.getApiKey());
-		capabilities.setCapability("pCloudy_DurationInMinutes", 10);
+		capabilities.setCapability("pCloudy_DurationInMinutes", 30);
 		capabilities.setCapability("appiumVersion", EnvironmentUtility.getAppiumVersion());
 		capabilities.setCapability("project", EnvironmentUtility.getProjectName());
 		capabilities.setCapability("build", EnvironmentUtility.getBuildName());
