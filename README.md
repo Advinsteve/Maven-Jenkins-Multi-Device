@@ -4,60 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jenkins Pipeline Configuration README</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #121212;
-            color: #ffffff;
-            padding: 20px;
-        }
-        h1, h2 {
-            color: #90caf9;
-        }
-        code {
-            background-color: #1e1e1e;
-            border: 1px solid #333;
-            padding: 5px;
-            font-size: 1.1em;
-            display: inline-block;
-            margin: 4px 0;
-            color: #ffcc00;
-        }
-        pre {
-            background-color: #1e1e1e;
-            border: 1px solid #333;
-            padding: 10px;
-            font-size: 1em;
-            overflow-x: auto;
-            color: #ffcc00;
-        }
-        ul {
-            margin: 20px 0;
-            padding: 0 20px;
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-        a {
-            color: #81d4fa;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .header {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-        .header img {
-            max-width: 100%;
-            margin-right: 15px;
-        }
-    </style>
-
 </head>
     <h1 class="header">
         <a target="_blank" rel="noopener noreferrer" href="https://www.pcloudy.com">
@@ -66,7 +12,7 @@
         <span>pCloudy Jenkins Sample Projects</span>
     </h1>
     <div class="section">
-        <h2>About <a href="https://www.pcloudy.com" target="_blank">pCloudy</a></h2>
+        <h2>About pCloudy</h2>
         <p>pCloudy platform provides single click access to real Android and iOS devices directly from your browser. Use these real Mobile Devices to click-and-perform Manual Testing and Automation Testing for your App. Integrate our platform with CI for continuous Automation Testing and test your App on multiple real Mobile Devices with every change of your App.</p>
         <p>pCloudy is a popular mobile testing platform integrated with Appium script which enables you to automate test of mobile apps as well.</p>
         <p>Read more here: <a href="https://www.pcloudy.com" target="_blank">https://www.pcloudy.com</a></p>
