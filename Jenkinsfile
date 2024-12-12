@@ -49,7 +49,7 @@ pipeline {
                     -DandroidAppActivity=${ANDROID_APPACTIVITY} \
                     -DiosBundleId=${IOS_BUNDLEID} \
                     -Dcloud=${CLOUD} \
-                    -DprojectName= ${PROJECT_NAME}\
+                    -DprojectName= ${PROJECT_NAME} \
                     -DbuildName=${BUILD_NAME} \
                     -DtestName=${TEST_NAME} \
                     -DtagName=${TAG_NAME}
