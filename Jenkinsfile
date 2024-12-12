@@ -48,7 +48,7 @@ pipeline {
                     -DandroidAppPackage=${ANDROID_APPPACKAGE} \
                     -DandroidAppActivity=${ANDROID_APPACTIVITY} \
                     -DiosBundleId=${IOS_BUNDLEID} \
-                    -Dcloud=${CLOUD}
+                    -Dcloud=${CLOUD} \
                     -DprojectName= ${PROJECT_NAME}\
                     -DbuildName=${BUILD_NAME} \
                     -DtestName=${TEST_NAME} \
