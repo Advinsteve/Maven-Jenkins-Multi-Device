@@ -9,7 +9,7 @@
         <a target="_blank" rel="noopener noreferrer" href="https://www.pcloudy.com">
             <img src="./images/logo.webp" alt="pCloudy">
         </a>
-        <span>pCloudy Jenkins Sample Projects</span>
+        <span>pCloudy Jenkins Sample Project</span>
     </h1>
     <div class="section">
         <h2>About pCloudy</h2>
